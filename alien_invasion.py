@@ -37,6 +37,7 @@ class AlienInvasion:
 
         #Set the background color
         self.bg_color = (230, 230, 230)
+        
 
     def run_game(self):
         #Start the main loop for the game.
@@ -148,6 +149,7 @@ class AlienInvasion:
             for aliens in collisions.values():
                 self.stats.score += self.settings.alien_points * len(aliens)
             self.sb.prep_score()
+            self.sb.check_high_score()
 
         if not self.aliens:
             #Destroy existing bullets and create new fleet
